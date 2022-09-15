@@ -9,6 +9,7 @@ async function build(format: Exclude<Format, "iife">): Promise<void> {
         bundle: true,
         target: ["esnext"],
         format,
+        platform: "node",
         entryPoints: ["src/index.ts"],
         outfile,
     };
@@ -19,6 +20,10 @@ async function build(format: Exclude<Format, "iife">): Promise<void> {
     for (const warning of result.warnings) {
         console.warn(warning.text);
     }
+    if (result.errors.length !== 0) {
+        process.exit(1);
+    }
+    process.exit(0);
 }
 
 build("esm");
