@@ -1,6 +1,6 @@
 import type { Linter } from "eslint";
 
-export const custom: Linter.Config = {
+const config: Linter.Config = {
     settings: {
         files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
     },
@@ -51,3 +51,5 @@ export const custom: Linter.Config = {
         ],
     },
 };
+
+export default config;
