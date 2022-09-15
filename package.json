@@ -1,0 +1,26 @@
+{
+    "name": "@stellaraf/eslint",
+    "version": "1.0.0",
+    "main": "dist/index.cjs",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "type": "module",
+    "license": "BSD-3-Clause",
+    "dependencies": {},
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@types/eslint": "^8.4.6",
+        "esbuild": "^0.15.7",
+        "typescript": "^4.8.3"
+    },
+    "scripts": {
+        "build:cjs": "esbuild src/index.ts --bundle --format=cjs --outdir=dist --out-extension:.js=.cjs",
+        "build:esm": "esbuild src/index.ts --bundle --format=esm --outdir=dist --out-extension:.js=.mjs",
+        "build:js": "pnpm run build:cjs && pnpm run build:esm",
+        "build:types": "tsc",
+        "build": "pnpm run build:js && pnpm run build:types",
+        "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    }
+}
