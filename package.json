@@ -1,13 +1,10 @@
 {
     "name": "@stellaraf/eslint-config",
-    "version": "1.0.5",
-    "main": "dist/index.cjs",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
-    "type": "module",
+    "version": "1.0.6",
+    "main": "index.js",
     "license": "BSD-3-Clause",
     "files": [
-        "dist/**/*"
+        "index.js"
     ],
     "dependencies": {
         "eslint-config-airbnb-base": "^15.0.0",
@@ -18,17 +15,8 @@
     },
     "devDependencies": {
         "@types/eslint": "^8.4.6",
-        "@types/node": "^18.7.18",
-        "esbuild": "^0.15.7",
         "eslint": "^8.23.1",
-        "eslint-plugin-import": "^2.26.0",
-        "ts-node": "^10.9.1",
-        "typescript": "^4.8.3"
+        "eslint-plugin-import": "^2.26.0"
     },
-    "scripts": {
-        "build:js": "ts-node-esm build.ts",
-        "build:ts": "tsc",
-        "build": "pnpm run build:js && pnpm run build:ts",
-        "typecheck": "tsc --noEmit --emitDeclarationOnly false"
-    }
+    "scripts": {}
 }
