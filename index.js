@@ -9,7 +9,7 @@ module.exports = {
         },
     },
     parser: "@typescript-eslint/parser",
-    extends: ["airbnb-base", "prettier", "prettier/@typescript-eslint"],
+    extends: ["airbnb-base", "prettier"],
     parserOptions: { project: "./tsconfig.json" },
     ignorePatterns: ["node_modules", "dist", "jest.config.ts", "*.spec.ts", "*.test.ts"],
     plugins: ["import", "@typescript-eslint"],
