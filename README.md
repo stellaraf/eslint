@@ -10,3 +10,24 @@
   <br/>
   <br/>
 </div>
+
+# Usage
+
+```bash
+# NPM
+npm install --save-dev @stellaraf/eslint-config
+# Yarn
+yarn add -D @stellaraf/eslint-config
+# PNPM
+pnpm add -D @stellaraf/eslint-config
+```
+
+In your eslint configuration:
+
+```json
+{
+  "extends": [
+    "@stellaraf"
+  ]
+}
+```

@@ -1,12 +1,13 @@
 {
     "name": "@stellaraf/eslint-config",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "main": "index.js",
     "license": "BSD-3-Clause",
     "files": [
         "index.js"
     ],
     "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.37.0",
         "@typescript-eslint/parser": "^5.37.0",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-config-prettier": "^8.5.0",
