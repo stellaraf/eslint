@@ -11,7 +11,14 @@ module.exports = {
     parser: "@typescript-eslint/parser",
     extends: ["airbnb-base", "prettier"],
     parserOptions: { project: "./tsconfig.json" },
-    ignorePatterns: ["node_modules", "dist", "jest.config.ts", "*.spec.ts", "*.test.ts"],
+    ignorePatterns: [
+        "node_modules",
+        "dist",
+        "jest.config.ts",
+        "*.spec.ts",
+        "*.test.ts",
+        "build.[jt]s",
+    ],
     plugins: ["import", "@typescript-eslint"],
     root: true,
     rules: {
