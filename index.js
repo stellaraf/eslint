@@ -20,6 +20,10 @@ module.exports = {
             "double",
             { avoidEscape: true, allowTemplateLiterals: true },
         ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            { devDependencies: ["**/*.test.[jt]s", "**/*.spec.[jt]s", "build.[jt]s"] },
+        ],
         "@typescript-eslint/return-await": "off",
         "no-restricted-syntax": "off",
         "no-return-await": "off",
