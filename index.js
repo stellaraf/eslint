@@ -2,11 +2,17 @@
 module.exports = {
     settings: {
         files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+        "import/resolver": {
+            node: {
+                extensions: [".js", ".jsx", ".ts", ".tsx"],
+            },
+        },
     },
-    extends: ["airbnb", "prettier"],
+    parser: "@typescript-eslint/parser",
+    extends: ["airbnb-base", "prettier", "prettier/@typescript-eslint"],
     parserOptions: { project: "./tsconfig.json" },
     ignorePatterns: ["node_modules", "dist", "jest.config.ts", "*.spec.ts", "*.test.ts"],
-    plugins: ["@typescript-eslint"],
+    plugins: ["import", "@typescript-eslint"],
     root: true,
     rules: {
         "@typescript-eslint/quotes": [
@@ -34,6 +40,16 @@ module.exports = {
         "no-await-in-loop": "off",
         "no-param-reassign": ["error", { props: false }],
         "no-continue": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                js: "never",
+                jsx: "never",
+                ts: "never",
+                tsx: "never",
+            },
+        ],
         "import/order": [
             "error",
             {
