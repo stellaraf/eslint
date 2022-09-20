@@ -20,6 +20,7 @@ module.exports = {
             },
         },
     },
+
     parser: "@typescript-eslint/parser",
     extends: [
         "airbnb-base",
@@ -38,6 +39,14 @@ module.exports = {
     ],
     plugins: ["import", "@typescript-eslint"],
     root: true,
+    overrides: [
+        {
+            files: ["*.ts", "*.tsx"],
+            rules: {
+                "no-undef": "off",
+            },
+        },
+    ],
     rules: {
         "@typescript-eslint/quotes": [
             "error",
