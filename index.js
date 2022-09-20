@@ -7,9 +7,26 @@ module.exports = {
                 extensions: [".js", ".jsx", ".ts", ".tsx"],
             },
         },
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"],
+        },
+        "import/resolver": {
+            typescript: {
+                alwaysTryTypes: true,
+                project: ["tsconfig.json", "package/tsconfig.json"],
+            },
+            node: {
+                project: ["tsconfig.json", "package/tsconfig.json"],
+            },
+        },
     },
     parser: "@typescript-eslint/parser",
-    extends: ["airbnb-base", "prettier"],
+    extends: [
+        "airbnb-base",
+        "prettier",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+    ],
     parserOptions: { project: "./tsconfig.json" },
     ignorePatterns: [
         "node_modules",
