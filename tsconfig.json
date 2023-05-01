@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "maxNodeModuleJsDepth": 1,
+    "emitDeclarationOnly": true,
+    "declaration": true
+  },
+  "input": ["**/*.js"]
+}
